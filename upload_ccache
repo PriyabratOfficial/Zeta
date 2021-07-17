@@ -10,6 +10,9 @@ com ()
 
 time com ccache 1 # Compression level 1, its enough
 
-mkdir -p ~/.config/rclone
-echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
-time rclone copy ccache.tar.gz apon:ccache/ci3 -P # apon is my rclone config name (first line without [] of ~/.config/rclone/rclone.conf file from rclone setupped pc), ccache/ci2 is where ccache will be saved in my cloud, use yours one
+#mkdir -p ~/.config/rclone
+#echo "$rclone_config" > ~/.config/rclone/rclone.conf # Write rclone config found from env variable, so that cloud storage can be used to upload ccache
+#time rclone copy ccache.tar.gz apon:ccache/ci3 -P # apon is my rclone config name (first line without [] of ~/.config/rclone/rclone.conf file from rclone setupped pc), ccache/ci2 is where ccache will be saved in my cloud, use yours one
+
+# Upload ccache.tar.gz to transfer.sh and print the url output so the we can use it to download ccache.tar.gz at the time of re-building
+time curl --upload-file ./ccache.tar.gz https://transfer.sh/ccache.tar.gz
