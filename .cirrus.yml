@@ -2,7 +2,7 @@ task:
     name: rom
     timeout_in: 4h
     container:
-      image: apon77/aosp:cirrus
+      dockerfile: Dockerfile
       cpu: 8
       memory: 32G
     environment:
