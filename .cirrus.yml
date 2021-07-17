@@ -11,10 +11,10 @@ task:
     # download_ccache_background_script:
     #  - bash download_ccache
     sync_script:
-      - ./sync
+      - bash sync
     monitor_background_script:
-      - ./monitor
+      - bash monitor
     build_script:
-      - ./build
+      - bash build
     upload_ccache_script:
-      - ./upload_ccache
+      - bash upload_ccache
