@@ -15,6 +15,6 @@ repo init --depth=1 -u git://github.com/DotOS/manifest.git -b dot11
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j30 || repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j8
 
 # Clone device tree, vendor tree and kernel tree
-git clone https://github.com/DotOS/device_xiaomi_pine -b dot11 device/xiaomi/pine
-git clone https://github.com/DotOS/vendor_xiaomi_pine -b dot11 vendor/xiaomi/pine
-git clone https://github.com/DotOS/kernel_xiaomi_pine -b dot11 kernel/xiaomi/pine
+git clone --depth=1 https://github.com/dotOS-Devices/device_xiaomi_pine -b dot11 device/xiaomi/pine
+git clone --depth=1 https://github.com/dotOS-Devices/vendor_xiaomi_pine -b dot11 vendor/xiaomi/pine
+git clone --depth=1 https://github.com/dotOS-Devices/kernel_xiaomi_pine -b dot11 kernel/xiaomi/pine
