@@ -3,7 +3,7 @@ task:
     timeout_in: 4h
     persistent_worker: {}
     container:
-      image: apon77/aosp:cirrus
+      dockerfile: Dockerfile
       cpu: 16
       memory: 60G
     environment:
