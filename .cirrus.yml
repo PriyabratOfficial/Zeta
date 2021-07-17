@@ -8,8 +8,8 @@ task:
     environment:
       CIRRUS_CLONE_DEPTH: 1
       CIRRUS_WORKING_DIR: "/tmp/ci"
-    # download_ccache_background_script:
-    #  - bash download_ccache
+    download_ccache_background_script:
+      - bash download_ccache.sh
     sync_script:
       - bash sync.sh
     monitor_background_script:
